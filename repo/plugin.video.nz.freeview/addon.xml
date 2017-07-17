@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<addon id="plugin.video.nz.freeview" name="NZ Freeview" version="0.0.4" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch all your favourite NZ Freeview channels!</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.4 (17/07/2017)
+- Update data file location
+
+0.0.3 (29/06/2017)
+- Update the way favorites are created
+  which allows for changing of URL without breaking them</news>
+  </extension>
+</addon>

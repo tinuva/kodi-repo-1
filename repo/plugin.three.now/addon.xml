@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<addon id="plugin.three.now" name="ThreeNow" version="0.0.9" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch the latest TV On Demand episodes of all your favourite shows from Three with ThreeNow</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.9 (08/05/2017)
+- Clean up
+
+0.0.8 (04/05/2017)
+- Update X-Forward-For IP address (fixes missing Bravo live stream)</news>
+  </extension>
+</addon>

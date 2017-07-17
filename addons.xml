@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="repository.matthuisman" name="MattHuisman.nz Repository" version="0.0.3" provider-name="MattHuisman.nz">
+  <extension point="xbmc.addon.repository" name="MattHuisman.nz Repository">
+    <dir>
+      <info compressed="false">https://api.bitbucket.org/1.0/repositories/matthuisman/matthuisman.nz-kodi-repo/raw/master/addons.xml</info>
+      <checksum>https://api.bitbucket.org/1.0/repositories/matthuisman/matthuisman.nz-kodi-repo/raw/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://api.bitbucket.org/1.0/repositories/matthuisman/matthuisman.nz-kodi-repo/raw/master/repo</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en">Addons by MattHuisman.nz</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.3 (18/07/2017)
+- Move repo to bitbucket</news>
+  </extension>
+</addon>
+
+<addon id="service.gpio.monitor" name="GPIO Monitor" version="0.0.2" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="virtual.rpi-tools" version="7.0.100" optional="true"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <platform>linux</platform>
+    <description lang="en">Monitors a GPIO pin and runs a KODI function (eg. Shutdown) when it changes (Raspberry Pi Only)</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+  </extension>
+</addon>
+
+<addon id="plugin.program.noobs.companion" name="NOOBS Companion" version="0.1.3" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform></platform>
+    <description lang="en">Allows easy booting between other installed NOOBS / PINN systems (Raspberry Pi Only)</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.1.3 (10/07/2017)
+- Hopefully more reliable reboot code
+
+0.1.2 (04/07/2017)
+- Fix Batocera boot-back
+- Clean-up boot-back code</news>
+  </extension>
+</addon>
+
+<addon id="plugin.tvnz.ondemand" name="TVNZ OnDemand" version="0.1.4" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite TVNZ shows OnDemand</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.1.4 (13/07/2017)
+- Fix: Also check /usr/lib for DRM decrypter
+
+0.1.3 (05/07/2017)
+- Add suport for Live Stream episodes (eg. Survivor)
+
+0.1.2 (30/06/2017)
+- Add suport for i386 / i686 arch
+- Remove *Episode* label from episodes list
+- Cleanup DRM helper code</news>
+  </extension>
+</addon>
+
+<addon id="plugin.three.now" name="ThreeNow" version="0.0.9" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch the latest TV On Demand episodes of all your favourite shows from Three with ThreeNow</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.9 (08/05/2017)
+- Clean up
+
+0.0.8 (04/05/2017)
+- Update X-Forward-For IP address (fixes missing Bravo live stream)</news>
+  </extension>
+</addon>
+
+<addon id="plugin.audio.nz.radio" name="NZ Radio" version="0.0.7" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="audio">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Listen to all your favourite NZ radio stations!</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.7 (17/07/2017)
+- Update data file location
+
+0.0.5 / 0.0.6 (29/06/2017)
+- Update the way favorites are created
+  which allows for changing of URL without breaking them</news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.nz.freeview" name="NZ Freeview" version="0.0.4" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch all your favourite NZ Freeview channels!</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.0.4 (17/07/2017)
+- Update data file location
+
+0.0.3 (29/06/2017)
+- Update the way favorites are created
+  which allows for changing of URL without breaking them</news>
+  </extension>
+</addon>
+
+</addons>

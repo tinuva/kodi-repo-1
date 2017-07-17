@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<addon id="plugin.tvnz.ondemand" name="TVNZ OnDemand" version="0.1.4" provider-name="MattHuisman.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch your favourite TVNZ shows OnDemand</description>
+    <license>GNU General Public License, v2</license>
+    <language></language>
+    <website>http://www.matthuisman.nz</website>
+    <news>0.1.4 (13/07/2017)
+- Fix: Also check /usr/lib for DRM decrypter
+
+0.1.3 (05/07/2017)
+- Add suport for Live Stream episodes (eg. Survivor)
+
+0.1.2 (30/06/2017)
+- Add suport for i386 / i686 arch
+- Remove *Episode* label from episodes list
+- Cleanup DRM helper code</news>
+  </extension>
+</addon>
